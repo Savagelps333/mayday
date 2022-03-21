@@ -1,6 +1,11 @@
 package com.mayday.view.login;
 
 
+import com.mayday.view.chat.ChatWindow;
+import javafx.animation.FadeTransition;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
+
 public class LoginEventDefine {
 
     private LoginInit loginInit;
@@ -37,6 +42,23 @@ public class LoginEventDefine {
     private void doEventLogin() {
         loginInit.login_button.setOnAction(event -> {
             loginEvent.doLoginCheck(loginInit.userId.getText(), loginInit.userPassword.getText());
+            String email = loginInit.userId.getText();
+            String password = loginInit.userPassword.getText();
+            if ("110@qq.com".equals(email) && "110".equals(password)) {
+                ChatWindow chatWindow = new ChatWindow(email, password);
+                loginInit.close();
+            }else {
+                //动画 渐变  密码错误的时候有种刷新的感觉,一闪而过,跟浏览器一样
+                FadeTransition fadeTransition = new FadeTransition();
+                //设置时间
+                fadeTransition.setDuration(Duration.seconds(0.2));
+                fadeTransition.setNode(loginInit.login);
+                //设置透明度
+                fadeTransition.setFromValue(0.5);
+                fadeTransition.setToValue(1);
+                fadeTransition.play();
+            }
         });
     }
+
 }

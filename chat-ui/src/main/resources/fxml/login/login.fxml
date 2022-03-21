@@ -3,6 +3,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <Pane id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
       prefWidth="540" prefHeight="415" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.121"
       xmlns:fx="http://javafx.com/fxml/1">
@@ -20,19 +22,19 @@
         <!-- 头像 -->
 <!--        <Pane id="headImg" layoutX="80" layoutY="200" prefWidth="100" prefHeight="100"/>-->
 
-        <TextField id="userId" layoutX="145" layoutY="200" prefWidth="250" prefHeight="45" promptText="邮箱">
+        <JFXTextField id="userId" layoutX="145" layoutY="200" prefWidth="250" prefHeight="45" promptText="邮箱">
             <padding>
                 <Insets left="10"/>
             </padding>
-        </TextField>
+        </JFXTextField>
 
-        <PasswordField id="userPassword" layoutX="145" layoutY="255" prefWidth="250" prefHeight="45" promptText="密码">
+        <JFXPasswordField id="userPassword" layoutX="145" layoutY="255" prefWidth="250" prefHeight="45" promptText="密码">
             <padding>
                 <Insets left="10"/>
             </padding>
-        </PasswordField>
+        </JFXPasswordField>
 
-        <JFXButton id="login_button" styleClass="jfx-button" layoutX="145" layoutY="340" prefWidth="250" prefHeight="45" text="登 陆"/>
+        <JFXButton id="login_button" styleClass="jfx-button" layoutX="153" layoutY="340" prefWidth="245" prefHeight="45" text="登 陆"/>
 <!--        <JFXButton id="login" fx:id="loginField" layoutX="333.0" layoutY="202.0" onAction="#login" text="登录" />-->
         <Label id="slogan" layoutX="10" layoutY="388" prefWidth="400" prefHeight="15"
                text="注册账号">

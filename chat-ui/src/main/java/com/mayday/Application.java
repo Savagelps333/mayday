@@ -1,5 +1,7 @@
 package com.mayday;
 
+
+import com.mayday.view.chat.ChatWindow;
 import com.mayday.view.login.ILoginMethod;
 import com.mayday.view.login.LoginController;
 import javafx.stage.Stage;
@@ -105,8 +107,8 @@ public class Application extends javafx.application.Application {
 //        ILoginMethod login = new LoginController((userId, userPassword) -> {
 //            System.out.println("登陆 userId：" + userId + "userPassword：" + userPassword);
 //        }, chat);
-        ILoginMethod login = new LoginController((userId, userPassword) -> {
-            System.out.println("登陆 userId：" + userId + "   userPassword：" + userPassword);
+        ILoginMethod login = new LoginController((email, password) -> {
+            System.out.println("登陆 userId：" + email + "   userPassword：" + password);
         });
 
         login.doShow();

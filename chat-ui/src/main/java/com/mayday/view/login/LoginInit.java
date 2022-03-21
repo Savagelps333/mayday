@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.StageStyle;
 
@@ -21,7 +22,7 @@ public abstract class LoginInit extends UIObject {
     private static final String RESOURCE_NAME = "/fxml/login/login.fxml";
 
     protected ILoginEvent loginEvent;
-
+    public Pane login;
     public Button login_min;          // 登陆窗口最小化
     public Button login_close;        // 登陆窗口退出
     public Button login_button;       // 登陆按钮
@@ -41,8 +42,7 @@ public abstract class LoginInit extends UIObject {
         initStyle(StageStyle.TRANSPARENT);
         setResizable(false);
         this.getIcons().add(new Image("/fxml/login/img/system/icon.png"));
-        //   /fxml/login/img/system/min_1.png
-//        this.getIcons().add(new Image("/fxml/login/img/system/min_1.png"));
+        this.setTitle("登录窗口");
         obtain();
         initView();//???
         initEventDefine();
@@ -54,6 +54,7 @@ public abstract class LoginInit extends UIObject {
         login_button = $("login_button", Button.class);
         userId = $("userId", TextField.class);
         userPassword = $("userPassword", PasswordField.class);
+        login = $("login",Pane.class);
     }
 
 }
