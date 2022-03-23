@@ -41,8 +41,8 @@ public abstract class LoginInit extends UIObject {
         setScene(scene);
         initStyle(StageStyle.TRANSPARENT);
         setResizable(false);
-        this.getIcons().add(new Image("/fxml/login/img/system/icon.png"));
-        this.setTitle("登录窗口");
+        this.setTitle("NetTalk - A terrible communication tool");
+        this.getIcons().add(new Image("/fxml/login/img/system/logo.png"));
         obtain();
         initView();//???
         initEventDefine();

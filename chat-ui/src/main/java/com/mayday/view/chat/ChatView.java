@@ -1,7 +1,11 @@
 package com.mayday.view.chat;
 
+/**
+ * @Author sava
+ * @Datetime 2022/3/22 0:41
+ * @Version 1.0
+ **/
 public class ChatView {
-
     private ChatInit chatInit;
     private IChatEvent chatEvent;
 
@@ -9,31 +13,5 @@ public class ChatView {
         this.chatInit = chatInit;
         this.chatEvent = chatEvent;
 
-        //1. 好友列表添加工具方法‘新的朋友’
-        initAddFriendLuck();
-        //2. 好友列表添加‘公众号’
-        addFriendSubscription();
-        //3. 好友群组框体
-        addFriendGroupList();
-        //4. 好友框体
-        addFriendUserList();
     }
-
-    private void addFriendUserList() {
-
-    }
-
-    private void addFriendGroupList() {
-
-    }
-
-    private void addFriendSubscription() {
-
-    }
-
-    private void initAddFriendLuck() {
-
-    }
-
-
 }

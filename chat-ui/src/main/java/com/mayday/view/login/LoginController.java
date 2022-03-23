@@ -3,7 +3,6 @@ package com.mayday.view.login;
 
 import com.mayday.view.chat.IChatMethod;
 
-
 public class LoginController extends LoginInit implements ILoginMethod {
 
     private IChatMethod chat;

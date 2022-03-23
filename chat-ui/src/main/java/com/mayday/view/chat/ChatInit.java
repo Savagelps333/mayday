@@ -2,29 +2,43 @@ package com.mayday.view.chat;
 
 import com.mayday.view.UIObject;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.StageStyle;
 
 
 import java.io.IOException;
 
+/**
+ * @Author sava
+ * @Datetime 2022/3/22 0:14
+ * @Version 1.0
+ **/
 public abstract class ChatInit extends UIObject {
-
     private static final String RESOURCE_NAME = "/fxml/chat/chat.fxml";
-
-    public String userId;       // 用户ID
-    public String userNickName; // 用户昵称
-    public String userHead;     // 用户头像
-
     public IChatEvent chatEvent;
+    public Pane main_view;//聊天主界面
+    public Pane side_bar;//侧边栏
+    public Label bar_portrait;//头像
+    public Button bar_chat;//聊天
+    public Button bar_friend;//好友
+    public Button bar_setting;//设置
+    public Pane group_bar_chat;//聊天界面
+    public Pane group_bar_friend;//好友界面
+    public Pane group_bar_setting;//设置界面
+    public Button group_bar_chat_min;
+    public Button group_bar_friend_min;
+    public Button group_bar_setting_min;
+    public Button group_bar_chat_close;
+    public Button group_bar_friend_close;
+    public Button group_bar_setting_close;
 
-    public TextArea txt_input;  // 输入框
 
-    ChatInit(IChatEvent chatEvent) {
+    public ChatInit(IChatEvent chatEvent) {
         this.chatEvent = chatEvent;
         try {
             root = FXMLLoader.load(getClass().getResource(RESOURCE_NAME));
@@ -36,19 +50,31 @@ public abstract class ChatInit extends UIObject {
         setScene(scene);
         initStyle(StageStyle.TRANSPARENT);
         setResizable(false);
-        this.getIcons().add(new Image("/fxml/chat/img/head/logo.png"));
+        this.setTitle("NetTalk - A terrible communication tool");
+        this.getIcons().add(new Image("/fxml/login/img/system/logo.png"));
         obtain();
         initView();
         initEventDefine();
+
     }
 
     private void obtain() {
-        // 可以预加载
-        txt_input = $("txt_input", TextArea.class);
-    }
+        main_view = $("main_view",Pane.class);
+        side_bar = $("side_bar",Pane.class);
+        bar_portrait = $("bar_portrait",Label.class);
+        bar_chat = $("bar_chat",Button.class);
+        bar_friend = $("bar_friend",Button.class);
+        bar_setting = $("bar_setting",Button.class);
+        group_bar_chat = $("group_bar_chat",Pane.class);
+        group_bar_friend = $("group_bar_friend",Pane.class);
+        group_bar_setting = $("group_bar_setting",Pane.class);
+        group_bar_chat_min = $("group_bar_chat_min",Button.class);
+        group_bar_friend_min = $("group_bar_friend_min",Button.class);
+        group_bar_setting_min = $("group_bar_setting_min",Button.class);
+        group_bar_chat_close = $("group_bar_chat_close",Button.class);
+        group_bar_friend_close = $("group_bar_friend_close",Button.class);
+        group_bar_setting_close = $("group_bar_setting_close",Button.class);
 
-    public Parent root(){
-        return super.root;
-    }
 
+    }
 }
