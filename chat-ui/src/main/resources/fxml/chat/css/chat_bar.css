@@ -19,12 +19,12 @@
 
 #bar_portrait{
     -fx-border-width: 0;
-    /*-fx-background-radius: 2px;*/
+    -fx-background-radius: 2px;
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: 50px 48px;
     -fx-background-color: white;
-    -fx-background-image: url("/fxml/chat/img/head/head.jpg");
+    -fx-background-image: url("/fxml/chat/img/head/default.png");
     -fx-cursor: hand;
     -fx-border-width: 1px;
     -fx-border-radius: 2px;

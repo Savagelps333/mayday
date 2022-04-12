@@ -32,7 +32,7 @@ public abstract class UIObject extends Stage {
         root.setOnMousePressed(event -> {
             xOffset = getX() - event.getScreenX();
             yOffset = getY() - event.getScreenY();
-            System.out.println("xOffset= " + xOffset + "yOffset= " + yOffset);
+//            System.out.println("xOffset= " + xOffset + "yOffset= " + yOffset);
             root.setCursor(Cursor.CLOSED_HAND);
         });
         root.setOnMouseDragged(event -> {

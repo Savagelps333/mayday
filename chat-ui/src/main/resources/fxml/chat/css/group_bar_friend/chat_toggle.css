@@ -1,0 +1,15 @@
+#toggle{
+    -fx-background-color: #272727;
+}
+
+.toggle_btn{
+    -fx-background-color: #272727;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+    -fx-font-family: "微软雅黑";
+    -fx-border-width: 0;
+}
+
+.toggle_btn:hover{
+    -fx-background-color: #4c4c4c;
+}

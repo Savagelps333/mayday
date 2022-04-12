@@ -1,0 +1,31 @@
+#operation{
+    -fx-background-color: #f5f5f5;
+}
+
+.close,.close:pressed{
+    -fx-background-radius: 16px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-background-color: #6e6e6e;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.close:hover{
+    -fx-background-image: url("/fxml/chat/img/system/close.png");
+}
+
+.min,.min:pressed{
+    -fx-background-radius: 16px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 20px 20px;
+    -fx-background-color: #6e6e6e;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.min:hover{
+    -fx-background-image: url("/fxml/chat/img/system/min.png");
+}
